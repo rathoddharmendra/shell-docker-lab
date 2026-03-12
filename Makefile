@@ -1,6 +1,8 @@
 CONTAINER_NAME=centos-shell-lab
 IMAGE=dokken/centos-stream-9
 WORKDIR=/scripts
+FILENAME=setup-test.sh
+MESSAGE=Updated Project Files
 
 start:
 	@echo "Starting container..."
@@ -20,8 +22,15 @@ stop:
 remove:
 	docker rm $(CONTAINER_NAME)
 
-shell:
-	docker exec -it $(CONTAINER_NAME) bash
+access:
+	docker exec -it $(CONTAINER_NAME) /bin/bash
 
-run:
-	docker exec -it $(CONTAINER_NAME) bash scripts/setup-test.sh
+set-perm:
+	docker exec -it $(CONTAINER_NAME) /bin/bash -c "cd scripts && chmod +x *.sh"
+
+run-file:
+	docker exec -it $(CONTAINER_NAME) /bin/bash -c "$(WORKDIR)/scripts/$(FILENAME)"
+	# make run-file FILENAME=format.sh
+
+commit:
+	git add *; git commit -m '$(MESSAGE)'
