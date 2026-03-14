@@ -28,9 +28,11 @@ access:
 set-perm:
 	docker exec -it $(CONTAINER_NAME) /bin/bash -c "cd scripts && chmod +x *.sh"
 
-run-file:
+run-file: set-perm
+	#make set-perm
 	docker exec -it $(CONTAINER_NAME) /bin/bash -c "$(WORKDIR)/scripts/$(FILENAME)"
 	# make run-file FILENAME=format.sh
 
 commit:
-	git add *; git commit -m '$(MESSAGE)'
+	git add *; git commit -m '$(MESSAGE)'; git push -u main
+	#make commmit MESSAGE='updated project files'
