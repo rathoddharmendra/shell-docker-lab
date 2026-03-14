@@ -34,5 +34,5 @@ run-file: set-perm
 	# make run-file FILENAME=format.sh
 
 commit:
-	git add .; git commit -m '$(MESSAGE)'; git push -u main
+	git add .; git commit -m '$(MESSAGE)'; git push
 	#make commmit MESSAGE='updated project files'
