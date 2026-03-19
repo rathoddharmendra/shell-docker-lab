@@ -26,7 +26,7 @@ access:
 	docker exec -it $(CONTAINER_NAME) /bin/bash
 
 set-perm:
-	docker exec -it $(CONTAINER_NAME) /bin/bash -c "cd scripts && chmod +x *.sh"
+	docker exec -it $(CONTAINER_NAME) /bin/bash -c "find . -name "*.sh" -type f -exec chmod +x {} \;"
 
 run-file: set-perm
 	#make set-perm
