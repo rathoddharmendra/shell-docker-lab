@@ -5,7 +5,8 @@ FILENAME=setup-test.sh
 MESSAGE=Updated Project Files
 
 start:
-	@echo "Starting container..."
+# using @echo to reduce clutter
+	@echo "Starting container..." 
 	docker run -dit \
 	--name $(CONTAINER_NAME) \
 	-v $(PWD):$(WORKDIR) \
