@@ -1,8 +1,0 @@
-| Syntax       | Meaning                       |
-| ------------ | ----------------------------- |
-| `$(command)` | run command and return output |
-| `(commands)` | run commands in subshell      |
-| `$((math))`  | arithmetic calculation        |
-| `(a b c)`    | array                         
-
-

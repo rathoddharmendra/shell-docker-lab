@@ -28,6 +28,11 @@ access:
 set-perm:
 	docker exec -it $(CONTAINER_NAME) /bin/bash -c "find . -name "*.sh" -type f -exec chmod +x {} \;"
 
+
+set-local-perm:
+	find . -name "*.sh" -type f -exec chmod +x {} +
+
+
 run-file: set-perm
 	#make set-perm
 	docker exec -it $(CONTAINER_NAME) /bin/bash -c "$(WORKDIR)/scripts/$(FILENAME)"
