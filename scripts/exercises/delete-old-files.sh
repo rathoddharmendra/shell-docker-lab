@@ -3,7 +3,7 @@
 # Date: 08.04.2026
 # Description: This script deletes files older than 90 days
 
-OLD_FOLDER="/Users/mac_dee/Documents/Dee/code/shell-docker-lab/data/old-folders"
+OLD_FOLDER="/Users/mac_dee/Documents/Dee/code/shell-docker-lab/data/old-folders-test"
 
 # create files
 cd $OLD_FOLDER
