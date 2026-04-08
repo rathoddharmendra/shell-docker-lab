@@ -100,6 +100,7 @@ Use these to manipulate strings without calling `sed` or `awk`.
 Always use `[[ ]]` instead of `[ ]` in Bash/Zsh; it handles empty variables and strings more safely.
 
 * `-f`: Is a file.
+* `[ ! -e file] ` 
 * `-d`: Is a directory.
 * `-z`: String is empty.
 * `-n`: String is NOT empty.
