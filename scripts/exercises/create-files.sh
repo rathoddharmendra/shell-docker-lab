@@ -12,4 +12,5 @@ read file_suffix
 for file in $(seq 1 $file_count)
 do
     touch "$FILE_LOC/$file_suffix-$file.dee"
+    chmod a+x "$FILE_LOC/$file_suffix-$file.dee"
 done

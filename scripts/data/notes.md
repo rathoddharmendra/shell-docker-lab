@@ -8,7 +8,7 @@
 | `$(command)` | run command and return output - new subshell 
 | `(commands)` | run commands in subshell      
 | `$((math))`  | arithmetic calculation        
-| `(a b c)`    | array                         
+| `(a b c)`    | array     my_list=("a" "v" "d") echo ${my_list[0]}                    
 | `{1..10}`    | spread operator like 
 
 

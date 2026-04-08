@@ -21,3 +21,9 @@ cont=0
         echo $((cont++)):$username
         echo $((cont++)):$username >> users_list.txt
     done
+
+
+# for ((i=0;i<$file_count;i++))
+# do
+#     do something
+# done
