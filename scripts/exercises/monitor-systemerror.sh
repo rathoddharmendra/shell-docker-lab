@@ -5,7 +5,7 @@
 
 SYSTEM_LOG_FILE='/var/log/messages'
 
-tail -fn0 $SYSTEM_LOG_FILE | while read line
+sudo tail -fn0 $SYSTEM_LOG_FILE | while read line
 do
 echo $line | egrep -i "refused|invalid|error|fail|lost|shut|down|offline"
     if [ $? -eq 0 ]
