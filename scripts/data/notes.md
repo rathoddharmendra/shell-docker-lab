@@ -45,3 +45,11 @@ or, for DIR in *; do echo $DIR; done
 
 
 `last` command
+
+
+### logger utility
+logger -t error "custom error message" # to send error message to /var/log/message on linux
+tail -fn0 file_name # to read only new lines
+
+
+git ls-files | grep notes # nice command to see what git sees
