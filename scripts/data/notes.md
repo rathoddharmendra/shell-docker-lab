@@ -37,3 +37,11 @@ gzip ../data/bckup.tar
 find /Users/mac_dee/Documents/Dee/code/shell-docker-lab/scripts/exercises/ -name "*.log" -exec rm {} \;
 
 > `find` is much better for scripting than `ls`, as ls has some inbuilt behaviour for printing and give much more output
+
+### faster way to read files in a directory
+
+for DIR in *.sh; do echo $DIR; done
+or, for DIR in *; do echo $DIR; done
+
+
+`last` command
