@@ -53,3 +53,6 @@ tail -fn0 file_name # to read only new lines
 
 
 git ls-files | grep notes # nice command to see what git sees
+
+
+nohup command &
