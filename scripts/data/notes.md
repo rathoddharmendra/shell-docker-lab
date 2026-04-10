@@ -60,3 +60,14 @@ nohup command &
 
 <!-- remove headers in an output -->
 inactive_users=`lastlog | tail -n+2` # tail -n+2 removes headers
+
+
+### XARGS 
+
+much faster than  previous command - `find FOLDER_NAME -type f -exec wc -l {} +`
+prevoius command was - `find FOLDER_PATH -type f -exec wc -l {} \;`
+or, can use - `find FOLDER_PATH -type f | xargs wc -l`
+
+
+when passed replace-string -I any_char (usually {}), works one output at a time
+`lastlog | tail -n+2 | grep -i 'dee' | awk '{print $1}' | xargs -I{} sudo usermod -L {}`
