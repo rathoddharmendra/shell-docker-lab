@@ -56,3 +56,7 @@ git ls-files | grep notes # nice command to see what git sees
 
 
 nohup command &
+
+
+<!-- remove headers in an output -->
+inactive_users=`lastlog | tail -n+2` # tail -n+2 removes headers
