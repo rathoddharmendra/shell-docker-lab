@@ -9,4 +9,5 @@ inactive_users=`lastlog | tail -n+2 | grep -i 'dee' | awk '{print $1}'`
 for users in $inactive_users
 do
     echo $users
+    usermod -L $users
 done
