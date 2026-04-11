@@ -3,7 +3,7 @@
 # Date: 09.04.2026
 # Description: Assigns executable permissions to all script files, and copies projects to remote oracle cloud servers
 
-DATABASE='../data/database/inventory.txt'
+DATABASE='../data/database/inventory.yaml'
 
 check_existing_inventory() {
     local arg_value=$1
@@ -31,7 +31,15 @@ check_existing_inventory "$host_ip" "IP address"
 
 
 read -p "Please enter description for the host? " description
+# echo $host_name $host_ip $description >> $DATABASE
 
-echo $host_name $host_ip $description >> $DATABASE
+# --- YAML APPENDING LOGIC ---
+# Using a hyphen (-) creates a list item in YAML
+{
+    echo "- hostname: $host_name"
+    echo "  ip: $host_ip"
+    echo "  description: \"$description\""
+} >> "$DATABASE"
+
 echo "Successfully added $host_name to system inventory"
 

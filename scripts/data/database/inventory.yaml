@@ -1,3 +1,9 @@
 dee-server 12.22.43.212 new host file
 dada 192.168.1.1 This is dada's server
 sheral-server 192.168.23.2 Sheral's server
+- hostname: test
+  ip: 13.2.23.2
+  description: "new server"
+- hostname: destt
+  ip: 23.23.2.1.
+  description: "test"
