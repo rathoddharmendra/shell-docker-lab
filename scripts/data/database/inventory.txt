@@ -1,2 +1,3 @@
 dee-server 12.22.43.212 new host file
 dada 192.168.1.1 This is dada's server
+sheral-server 192.168.23.2 Sheral's server

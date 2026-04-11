@@ -43,5 +43,5 @@ commit:
 	git add .; git commit -m '$(m)'; git push
 	#make commmit MESSAGE='updated project files'
 
-copy:
+copy: set-perm
 	/Users/mac_dee/Documents/Dee/code/shell-docker-lab/scripts/exercises/copy-project-to-oci.sh

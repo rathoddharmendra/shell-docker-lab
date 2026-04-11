@@ -6,10 +6,6 @@
 
 ROOT_FOLDER='/Users/mac_dee/Documents/Dee/code/shell-docker-lab/'
 
-# Assign permissions
-cd $ROOT_FOLDER
-make set-local-perm
-
 # Dummy servers names
 servers=`cat /Users/mac_dee/Documents/Dee/code/shell-docker-lab/scripts/data/hostnames`
 
