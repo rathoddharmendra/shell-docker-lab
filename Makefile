@@ -2,7 +2,7 @@ CONTAINER_NAME=centos-shell-lab
 IMAGE=dokken/centos-stream-9
 WORKDIR=/scripts
 FILENAME=setup-test.sh
-MESSAGE=Updated Project Files
+m=Updated Project Files
 
 start:
 # using @echo to reduce clutter
@@ -26,11 +26,11 @@ remove:
 access:
 	docker exec -it $(CONTAINER_NAME) /bin/bash
 
+# set-perm:
+# 	docker exec -it $(CONTAINER_NAME) /bin/bash -c "find . -name "*.sh" -type f -exec chmod +x {} \;"
+
+
 set-perm:
-	docker exec -it $(CONTAINER_NAME) /bin/bash -c "find . -name "*.sh" -type f -exec chmod +x {} \;"
-
-
-set-local-perm:
 	find . -name "*.sh" -type f -exec chmod +x {} +
 
 
@@ -40,7 +40,7 @@ run-file: set-perm
 	# make run-file FILENAME=format.sh
 
 commit:
-	git add .; git commit -m '$(MESSAGE)'; git push
+	git add .; git commit -m '$(m)'; git push
 	#make commmit MESSAGE='updated project files'
 
 copy:
